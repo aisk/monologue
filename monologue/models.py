@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Article(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=128)
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
@@ -14,7 +14,7 @@ class Article(models.Model):
         return self.title
 
 class Comment(models.Model):
-    article = models.ForeignKey(Article, on_delete=models.DO_NOTHING)
+    article = models.ForeignKey(Post, on_delete=models.DO_NOTHING)
     content = models.CharField(max_length=1024)
     name = models.CharField(max_length=64)
     email = models.EmailField()
