@@ -11,6 +11,7 @@ authors = ["An Long <aisk1988@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 django = "^3.0.8"
+markdown = "^3.2.2"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.782"
