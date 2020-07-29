@@ -5,7 +5,7 @@ from .models import Post
 
 
 def index_view(request: HttpRequest) -> HttpResponse:
-    posts = Post.objects.all()
+    posts = Post.objects.order_by('-created_at').all()
     return render(request, "index.html", {
         'posts': posts,
     })
