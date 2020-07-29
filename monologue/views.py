@@ -1,4 +1,3 @@
-import markdown
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, get_object_or_404
 
@@ -13,5 +12,4 @@ def post_view(request: HttpRequest, post_id: int) -> HttpResponse:
     post = get_object_or_404(Post, id=post_id)
     return render(request, "post.html", {
         'post': post,
-        'content': markdown.markdown(post.content, extensions=['tables', 'toc']),
     })
