@@ -5,7 +5,10 @@ from .models import Post
 
 
 def index_view(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("It works!")
+    posts = Post.objects.all()
+    return render(request, "index.html", {
+        'posts': posts,
+    })
 
 
 def post_view(request: HttpRequest, post_id: int) -> HttpResponse:
