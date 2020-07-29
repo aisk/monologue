@@ -12,7 +12,7 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def render_content(self):
-        return markdown.markdown(self.content, extensions=["tables"])
+        return markdown.markdown(self.content, extensions=["tables", "toc"])
 
     def __str__(self):
         return self.title
