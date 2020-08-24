@@ -19,19 +19,37 @@
 {% endfor %}
 
 
-<form method="POST">
+<form method="POST" class="needs-validation" novalidate>
     <div class="form-group">
         <label for="commentName">Your Name</label>
-        <input type="text" class="form-control" id="name" name="name">
+        <input type="text" class="form-control" id="name" name="name" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please choose a username.
+        </div>
     </div>
     <div class="form-group">
         <label for="commentEmail">Your Email</label>
-        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" />
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required/>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please input your valid email address.
+        </div>
     </div>
     <div class="form-group">
         <label for="commentContent">Comment Content</label>
-        <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+        <textarea class="form-control" id="content" name="content" rows="3" required maxlength="1024"></textarea>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            What's your comment?
+        </div>
     </div>
     {% csrf_token %}
     <button type="submit" class="btn btn-primary">Submit</button>
