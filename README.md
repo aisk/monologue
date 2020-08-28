@@ -4,6 +4,7 @@
 
 [![PyPI version](https://badge.fury.io/py/django-monologue.svg)](https://pypi.python.org/pypi/django-monologue/)
 [![PyPI format](https://img.shields.io/pypi/format/django-monologue.svg)](https://pypi.python.org/pypi/django-monologue/)
+[![Join the chat at https://gitter.im/aisk/monologue](https://badges.gitter.im/aisk/monologue.svg)](https://gitter.im/aisk/monologue?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 Simple blog system based on Django. Can be used as standalone project or as a django app to be used in your django project.
