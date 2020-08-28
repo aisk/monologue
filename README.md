@@ -2,6 +2,10 @@
 
 ![Christopher Walken](https://upload.wikimedia.org/wikipedia/commons/1/18/Christopher_Walken_-_1984.jpg)
 
+[![PyPI version](https://badge.fury.io/py/django-monologue.svg)](https://pypi.python.org/pypi/django-monologue/)
+[![PyPI format](https://img.shields.io/pypi/format/django-monologue.svg)](https://pypi.python.org/pypi/django-monologue/)
+
+
 Simple blog system based on Django. Can be used as standalone project or as a django app to be used in your django project.
 
 ## Usage
