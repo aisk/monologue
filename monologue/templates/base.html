@@ -21,7 +21,7 @@
 
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="/">Monologue</a>
+    <a class="navbar-brand" href="{% url "index" %}">Monologue</a>
   </nav>
   <div class="container">
     <div class="row">
@@ -35,7 +35,7 @@
           <ul class="list-group">
             {% for tag in tags %}
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a href="/tag/{{ tag.name }}">{{ tag.name }}</a>
+              <a href="{% url "tag" tag.name %}">{{ tag.name }}</a>
               <span class="badge badge-primary badge-pill">{{ tag.posts.count }}</span>
             </li>
             {% endfor %}

@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["An Long <aisk1988@gmail.com>"]
 packages = [
-    { include = "monologue/*" }
+    { include = "monologue/**/*" },
 ]
 exclude = [
     "monologue/asgi.py",

@@ -2,7 +2,7 @@
 
 {% block content %}
 {% for post in posts %}
-<h1 class="mt-4"><a href="/post/{{ post.id }}">{{ post.title }}</a></h1>
+<h1 class="mt-4"><a href="{% url "post" post.id %}">{{ post.title }}</a></h1>
 <p class="font-weight-light">written by {{ post.author.username }} on {{ post.created_at }}</p>
 <p>{{ post.render_content | safe }}</p>
 {% if not forloop.last %}
