@@ -1,12 +1,16 @@
-[[tool.poetry.source]]
-name = "douban"
-url = "https://pypi.doubanio.com/simple/"
-
 [tool.poetry]
-name = "monologue"
+name = "django-monologue"
 version = "0.1.0"
 description = ""
 authors = ["An Long <aisk1988@gmail.com>"]
+packages = [
+    { include = "monologue/*" }
+]
+exclude = [
+    "monologue/asgi.py",
+    "monologue/wsgi.py",
+    "monologue/settings.py",
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
