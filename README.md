@@ -54,6 +54,8 @@ The mount path in this example above is `blog/`, you can change it to whatever y
 
 You can clone this repo and use it just like a normal django project.
 
+And please notice that you should change the secret key in `settings.py` before use.
+
 ## License
 
 MIT
