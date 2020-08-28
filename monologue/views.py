@@ -17,13 +17,13 @@ def index_view(request: HttpRequest) -> HttpResponse:
 def post_view(request: HttpRequest, post_id: int) -> HttpResponse:
     post = get_object_or_404(Post, id=post_id)
     tags = Tag.objects.all()
-    comments = Comment.objects.filter(article=post).order_by('created_at').all()
+    comments = Comment.objects.filter(post=post).order_by('created_at').all()
     if request.method == "POST":
         form = forms.CommentForm(request.POST)
         if not form.is_valid():
             return HttpResponseBadRequest(form.errors.as_ul())
         comment = form.save(commit=False)
-        comment.article = post
+        comment.post = post
         comment.save()
     return render(request, "post.html", {
         'post': post,

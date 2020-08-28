@@ -15,7 +15,7 @@ class Post(models.Model):
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     permalink = models.CharField(max_length=128, blank=True)
-    tags = models.ManyToManyField(Tag, related_name="articles")
+    tags = models.ManyToManyField(Tag, related_name="posts")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -27,7 +27,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    article = models.ForeignKey(Post, on_delete=models.DO_NOTHING)
+    post = models.ForeignKey(Post, on_delete=models.DO_NOTHING)
     content = models.CharField(max_length=1024)
     name = models.CharField(max_length=64)
     email = models.EmailField()
