@@ -41,6 +41,14 @@ pyflakes = ">=2.2.0,<2.3.0"
 
 [[package]]
 category = "main"
+description = "A library that provides a Python 3 interface for the Gravatar API."
+name = "libgravatar"
+optional = false
+python-versions = "*"
+version = "0.2.4"
+
+[[package]]
+category = "main"
 description = "Python implementation of Markdown."
 name = "markdown"
 optional = false
@@ -131,7 +139,7 @@ python-versions = "*"
 version = "3.7.4.2"
 
 [metadata]
-content-hash = "05af209f086a264e5839c07d4ddb0df23fc0f59af322807ef2f3df1a23b7c78a"
+content-hash = "d05ff76a4483d7565fd4da861dd5c6a1a07d7354ba2ed5695081621dd3d5e94c"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -146,6 +154,10 @@ django = [
 flake8 = [
     {file = "flake8-3.8.3-py2.py3-none-any.whl", hash = "sha256:15e351d19611c887e482fb960eae4d44845013cc142d42896e9862f775d8cf5c"},
     {file = "flake8-3.8.3.tar.gz", hash = "sha256:f04b9fcbac03b0a3e58c0ab3a0ecc462e023a9faf046d57794184028123aa208"},
+]
+libgravatar = [
+    {file = "libgravatar-0.2.4-py2.py3-none-any.whl", hash = "sha256:bff40a1faeb9097da01c791e310fd12a687e38c7950622abfd45d107ca524368"},
+    {file = "libgravatar-0.2.4.tar.gz", hash = "sha256:474f90eeac4b17d7178c9657f9be8f0287b1cecf31c9a78181d8053e1323bfe9"},
 ]
 markdown = [
     {file = "Markdown-3.2.2-py3-none-any.whl", hash = "sha256:c467cd6233885534bf0fe96e62e3cf46cfc1605112356c4f9981512b8174de59"},

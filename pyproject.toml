@@ -16,6 +16,7 @@ exclude = [
 python = "^3.8"
 django = "^3.0.8"
 markdown = "^3.2.2"
+libgravatar = "^0.2.4"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.782"

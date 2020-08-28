@@ -1,3 +1,5 @@
+from typing import Optional
+import libgravatar
 import markdown
 from django.db import models
 from django.contrib.auth.models import User
@@ -19,7 +21,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def render_content(self):
+    def render_content(self) -> str:
         return markdown.markdown(self.content, extensions=["tables", "toc"])
 
     def __str__(self):
@@ -32,3 +34,7 @@ class Comment(models.Model):
     name = models.CharField(max_length=64)
     email = models.EmailField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def gravatar_url(self, size: Optional[int] = 64) -> str:
+        gravatar = libgravatar.Gravatar(self.email)
+        return gravatar.get_image(size)

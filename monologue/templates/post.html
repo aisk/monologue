@@ -9,7 +9,7 @@
 
 {% for comment in comments %}
 <div class="media">
-    <img src="https://via.placeholder.com/64" class="mr-3" alt="...">
+    <img src="{{ comment.gravatar_url }}" class="mr-3" alt="...">
     <div class="media-body">
       <h5 class="mt-0">{{ comment.name }} said:</h5>
       {{ comment.content }}
