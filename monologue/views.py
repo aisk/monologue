@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.http import HttpRequest, HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render, get_object_or_404
 
@@ -5,10 +6,13 @@ from . import forms
 from .models import Comment, Post, Tag
 
 
+theme_folder = getattr(settings, "MONOLOGUE_THEME", "default")
+
+
 def index_view(request: HttpRequest) -> HttpResponse:
     posts = Post.objects.order_by('-created_at').all()
     tags = Tag.objects.all()
-    return render(request, "index.html", {
+    return render(request, f"{theme_folder}/index.html", {
         'posts': posts,
         'tags': tags,
     })
@@ -25,7 +29,7 @@ def post_view(request: HttpRequest, post_id: int) -> HttpResponse:
         comment = form.save(commit=False)
         comment.post = post
         comment.save()
-    return render(request, "post.html", {
+    return render(request, f"{theme_folder}/post.html", {
         'post': post,
         'tags': tags,
         "comments": comments,
@@ -36,7 +40,7 @@ def tag_view(request: HttpRequest, tag_name: str) -> HttpResponse:
     tag = get_object_or_404(Tag, name=tag_name)
     posts = Post.objects.filter(tags=tag).order_by('-created_at').all()
     tags = Tag.objects.all()
-    return render(request, "index.html", {
+    return render(request, f"{theme_folder}/index.html", {
         'posts': posts,
         'tags': tags,
     })

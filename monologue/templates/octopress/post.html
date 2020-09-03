@@ -1,0 +1,21 @@
+{% extends 'octopress/base.html' %}
+
+{% block content %}
+<article>
+    <header>
+        <h1 class="entry-title">
+            <a href="{% url "post" post.id %}">{{ post.title }}</a>
+        </h1>
+        <p class="meta">
+            <time datetime="2015-01-15T13:07:00-06:00" pubdate data-updated="true">Jan
+                15<span>th</span>, 2015</time>
+            &bull; <a rel="bookmark" href="{% url "post" post.id %}">Permalink</a>
+        </p>
+    </header>
+    <div class="entry-content">
+        <p>{{ post.render_content | safe }}</p>
+    </div>
+    <footer>
+    </footer>
+</article>
+{% endblock %}

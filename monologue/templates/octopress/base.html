@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Octopress</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="http://octopress.org/stylesheets/screen.css" media="screen, projection" rel="stylesheet"
+        type="text/css">
+    <script src="http://octopress.org/javascripts/octopress.min.js" type="text/javascript"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet'
+        type='text/css'>
+</head>
+
+<body class="no-sidebar">
+    <header role="banner">
+        <hgroup>
+            <h1><a href="/">Octopress</a></h1>
+            <h2>A blogging framework for hackers.</h2>
+        </hgroup>
+    </header>
+    <nav role="navigation">
+        <ul role=main-navigation>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <div id="content">
+            <div class="blog-index">
+
+                {% block content %}
+                {% endblock %}
+
+                <div class="pagination">
+                    <a href="/archives">Blog Archives</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer role="contentinfo">
+        <p>
+            Copyright &copy; 2029 - An Long -
+            <span class="credit">Powered by <a href="https://github.com/aisk/monologue">Monologue</a></span>
+        </p>
+    </footer>
+</body>
+</html>
