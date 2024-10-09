@@ -14,7 +14,7 @@ exclude = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-django = "^3.0.8"
+django = ">=3.0.8,<5.0.0"
 markdown = "^3.2.2"
 libgravatar = "^0.2.4"
 
